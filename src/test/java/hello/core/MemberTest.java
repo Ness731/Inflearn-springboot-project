@@ -7,8 +7,9 @@ import hello.core.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class memberTest {
-    MemberService memberService = new MemberServiceImpl();
+public class MemberTest {
+    AppConfig appConfig = new AppConfig();
+    MemberService memberService = appConfig.memberService();
     @Test
     void join() {
         //** 회원가입 기능 테스트 **
