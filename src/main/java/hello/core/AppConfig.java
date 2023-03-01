@@ -14,8 +14,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
-    @Bean
-    public MemberService memberService() {
+    @Bean(name = "memberService") // Bean 이름 수동 지정
+    public MemberService memberService() { // Bean 이름 자동 지정 시 메서드 이름과 동일
         return new MemberServiceImpl(memberRepository());
     }
 
